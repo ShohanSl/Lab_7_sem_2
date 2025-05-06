@@ -21,7 +21,10 @@ void main(){  // Меню
         else if (command==2) deleteChosenNode(&root);
         else if (command==3) displayTree(root);
         else if (command==4) checkMaxRepit(root);
-        else if (command==0) return;
+        else if (command==0){
+            freeTree(root);
+            return;
+        }
         else printf("\nInput error. Please try again\n");
     }
 }

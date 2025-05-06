@@ -28,4 +28,6 @@ void displayTree();
 
 void checkMaxRepit();
 
+void freeTree();
+
 #endif

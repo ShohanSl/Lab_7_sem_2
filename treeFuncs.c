@@ -124,3 +124,11 @@ void checkMaxRepit(TreeNode *root){
     TreeNode *maxNode = findMax(root);
     printf("\nMaximum integer in a tree - '%d'\n\nIt is repeated %d times\n", maxNode->data, maxNode->repetitions);
 }
+
+void freeTree(TreeNode* root) {
+    if (root != NULL) {
+        freeTree(root->left);
+        freeTree(root->right);
+        free(root);
+    }
+}
